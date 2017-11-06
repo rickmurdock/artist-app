@@ -5,7 +5,7 @@
 The goal of this exercise is to build a simple web application that allows a user to browse and manage a database of artist and related album information.
 
 ### Methodology
-This exercise is designed to test the candidate’s development workflow and skill level at various aspects of the overall solution. It is intended that the candidate ask questions, use internet resources, and ask for general guidance from LBMC personnel during the exercise as needed. The instructions are purposefully minimal to allow the candidate to use discretion about how the solution should be completed.
+This exercise is designed to test the candidate’s development workflow and skill level at various aspects of the overall solution. It is intended that the candidate ask questions, use internet resources, and ask for general guidance from company personnel during the exercise as needed. The instructions are purposefully minimal to allow the candidate to use discretion about how the solution should be completed.
 
 ### Development Guidelines
 The following technologies should be used but alternates can be considered too. 
