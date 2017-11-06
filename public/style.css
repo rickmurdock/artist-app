@@ -31,3 +31,8 @@ button:hover {
   color: green;
   background: blue;
 }*/
+
+button:focus {
+  background:#0078D3;
+  color: white;
+}
