@@ -27,3 +27,21 @@ The design in the screenshot (layout, colors, etc.) can be implemented as shown 
 The only requirements for the design are as follows:
 
   1. Must demonstrate a table-less design on the artist listing screen. Must use div’s to create the left and right panes of the layout as shown above.
+
+
+### Screen Notes: Artist Listing Screen
+
+  1. The artist listing screen should list the artist on the left and the albums for that artist on the right.
+
+  2. Clicking the “New Artist / Album” button should take the user to a form where they can add a new artist, album or both at the same time.
+
+  3. Clicking on an artist should show the albums for the artist to the right of the page. The selected artist name should be highlighted on selection.
+
+## Requirements for Completion
+The candidate’s application should accomplish the following to be considered functionally complete.
+
+  1. Listing artists
+
+  2. Clicking on an artist returns the albums for the artist
+
+  3. Clicking the “New Artist / Album” button should present the user with a form to enter a new artist, album, or both and save the new entry.
