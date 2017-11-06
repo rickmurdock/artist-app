@@ -16,11 +16,26 @@ newArtistRouter.post('/', (req, res) => {
 
 //
   let query = artistData.artistName
-  
-  Artist
-    .findOneAndUpdate({ artistName: artistData.artistName }, { artistName: artistData.artistName, $addToSet: { albums: artistData.albumName }}, { upsert: true } )
-    .then(savedArtist => {
 
+  if(artistData.albumName != '') {
+    Artist
+      .findOneAndUpdate({ artistName: artistData.artistName }, { artistName: artistData.artistName, $addToSet: { albums: artistData.albumName }}, { upsert: true } )
+      .then(savedArtist => {
+        res.redirect('/artist');
+      })
+      .catch(err => {
+        res.status(500).send(err);
+      });
+  } else {
+     Artist
+      .findOneAndUpdate({ artistName: artistData.artistName }, { artistName: artistData.artistName}, { upsert: true } )
+      .then(savedArtist => {
+        res.redirect('/artist');
+      })
+      .catch(err => {
+        res.status(500).send(err);
+      });   
+  }
       // if(artistData.albumName != ''){
       //   console.log('ALBUM ENTERED', artistData.albumName );
       //   Artist.update(
@@ -35,11 +50,7 @@ newArtistRouter.post('/', (req, res) => {
         
   
 
-      res.redirect('/artist');
-    })
-    .catch(err => {
-      res.status(500).send(err);
-    });
+
 
   // let newArtist = new Artist(artistData);
   // newArtist.albums.push(artistData.albumName)

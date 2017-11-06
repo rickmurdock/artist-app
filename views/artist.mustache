@@ -55,28 +55,35 @@
 
         <div class="col-4">
           <h3>Albums</h3>
+          <p>These are the albums for this band/artist</p>
           <p id="albums">
-
           </p>
           <p id="demo">
-
           </p>
-
         </div>
       </div>
     </div>
   </body>
   <script>  
     function showAlbums(vinyl) {
+      document.getElementById("demo").innerHTML = "";
       console.log(vinyl);
+      console.log(vinyl.length);
       //console.log(vinyl[`_id`]);
+
+      let records = vinyl.split(",");
+      console.log(records);
       document.getElementById("albums").innerHTML =  vinyl;
 
-      
-    // for (x in vinyl) {
-    //   document.getElementById("demo").innerHTML += vinyl[x] + "<br>";
-// }
-      
+      let albumList = document.getElementById("demo");
+
+      albumList.innerHTML += "<ul>"
+      for (x in records) {
+        // document.getElementById("demo").innerHTML += records[x] + "<br>";
+        albumList.innerHTML += "<li>" + records[x] + "</li>";
+      }
+          
+      albumList.innerHTML += "</ul>"
     }
   </script>
 </html>
