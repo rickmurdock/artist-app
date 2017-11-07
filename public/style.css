@@ -13,9 +13,7 @@
   background: transparent;
 }
 
-h1 {
-  color: red;
-}
+
 
 /*button:active {
   color: red;
@@ -35,4 +33,71 @@ button:hover {
 button:focus {
   background:#0078D3;
   color: white;
+}
+
+/*.fa {
+    color: gray;
+    padding: 0 0 0 10px;
+}
+
+.icon {
+    text-align: left;
+    position: relative;
+    margin: 0px 0 20px 25px;
+}*/
+
+/*textarea, input {
+  padding:10px;
+	font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}*/
+#wrapper {
+    margin: 0 auto;
+    /*text-align: center;*/
+    border: 1px solid blue;
+}
+
+.new-artist {
+  padding: 10px;
+  /*border: 1px solid gray;*/
+}
+
+header {
+    height: 75px;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 200;
+    text-align: left;
+    padding: 20px 23px;
+    border: 2px solid lightgray;
+    border-radius: 5px 5px 0 0;
+    background-color: #428BCA;
+}
+
+/*form {
+    border-right: 2px solid lightgray;
+    border-left: 2px solid lightgray;
+    padding: 20px 0;
+    display: flex;
+    flex-flow: column nowrap;
+}*/
+
+label,
+.form-control {
+  margin: 0 20px;
+  /*/border: 1px solid red;*/
+}
+
+
+
+nav {
+  min-height: 56px;
+}
+
+.artist {
+  height: 200px;
+  margin: auto auto;
+  background-color: lightgreen;
 }
