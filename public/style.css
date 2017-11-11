@@ -13,7 +13,12 @@
   background: transparent;
 }
 
-
+.wrapper-index {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-image: url("./turntable.jpg");
+}
 
 /*button:active {
   color: red;
@@ -34,17 +39,6 @@ button:focus {
   background:#0078D3;
   color: white;
 }
-
-/*.fa {
-    color: gray;
-    padding: 0 0 0 10px;
-}
-
-.icon {
-    text-align: left;
-    position: relative;
-    margin: 0px 0 20px 25px;
-}*/
 
 /*textarea, input {
   padding:10px;
@@ -84,10 +78,13 @@ header {
     flex-flow: column nowrap;
 }*/
 
-label,
-.form-control {
+
+label {
+  margin: 20px 0 0 0;
+}
+
+.form-group {
   margin: 0 20px;
-  /*/border: 1px solid red;*/
 }
 
 
@@ -99,5 +96,22 @@ nav {
 .artist {
   height: 200px;
   margin: auto auto;
-  background-color: lightgreen;
+}
+
+.btn-artist {
+  margin: 20px;
+}
+
+.h1-index {
+  text-align: center;
+  margin: 60px;
+  font-size: 4.5em;
+  font-family: 'Monoton', cursive;
+}
+
+.h2-index {
+  text-align: center;
+  margin: 20px;
+  font-size: 2.5em;
+  font-family: 'Josefin Slab', serif;
 }
