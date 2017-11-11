@@ -20,6 +20,21 @@
   background-image: url("./turntable.jpg");
 }
 
+.wrapper-artist {
+  height: 100%;
+  width: 100%;
+  /*background-size: cover;
+  background-image: url("./turntable.jpg");*/
+  background-color: #D0D0D0;
+}
+
+.wrapper-new {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-image: url("./turntable.jpg");
+}
+
 /*button:active {
   color: red;
   background: blue;
@@ -87,15 +102,8 @@ label {
   margin: 0 20px;
 }
 
-
-
 nav {
   min-height: 56px;
-}
-
-.artist {
-  height: 200px;
-  margin: auto auto;
 }
 
 .btn-artist {
@@ -113,5 +121,34 @@ nav {
   text-align: center;
   margin: 20px;
   font-size: 2.5em;
+  font-family: 'Josefin Slab', serif;
+}
+
+.h1-artist,
+.h1-new {
+  text-align: center;
+  margin: 20px;
+  font-size: 3.5em;
+  font-family: 'Monoton', cursive;
+}
+
+.h3-artist {
+  font-weight: 600;
+  font-family: 'Josefin Slab', serif;
+}
+
+#albums {
+  margin-left: 30px;
+}
+
+.div-new-artist {
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.h2-new {
+  padding-top: 20px;
+  font-weight: 600;
   font-family: 'Josefin Slab', serif;
 }

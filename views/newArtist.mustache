@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" 
           media="screen" rel="stylesheet" title="no title">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Monoton" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <link href="/style.css" rel="stylesheet">
   </head>
   <body>
+  <div class="wrapper-new">
     <nav class="navbar sticky-top navbar-toggleable-sm navbar-inverse bg-inverse">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,32 +33,34 @@
         </ul>
       </div>
     </nav>
+    <h1 class="h1-new">New &nbsp; Artist / Album</h1>
     <div class="container">
       <div class="row">
         <div class="col-3">
         </div> 
-        <div class="col-6">
+        <div class="col-6 div-new-artist">
           
-
             <form class="new-artist" action="/newArtist" method="POST">
-              <header>
+              <!-- <header>
                 <h1>Enter New Artist / Album</h1>
-              </header>
+              </header> -->
+              <h2 class="h2-new">Enter Artist or Artist & Album</h2>
               <div class="form-group">
                 <label for="artistName" class="text-left">Artist or Band Name</label><br>
-                <input type="text" class="form-control" placeholder="" name="artistName" maxlength="40" required>
+                <input type="text" class="form-control" placeholder="" id="artistName" name="artistName" maxlength="40" autofocus="autofocus" required>
                 <!--<input type="text" class="form-control" placeholder="&#xf007;  Artist Name" name="artistName" required> -->
               </div>
               <div class="form-group">
                 <label for="albumName" class="text-left">Album</label><br>
-                <input type="text" class="form-control" placeholder="" name="albumName" maxlength="40">
+                <input type="text" class="form-control" placeholder="" id="albumName" name="albumName" maxlength="40">
                 <!--<input type="text" class="form-control" placeholder="&#xf001;  Album Name" name="albumName"> -->
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary btn-artist">Submit</button>
             </form>
           
         </div>
       </div>
     </div>
+  </div>
   </body>
 </html> 
