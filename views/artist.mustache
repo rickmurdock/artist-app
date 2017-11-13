@@ -3,6 +3,9 @@
   <head>
     <title>Artist</title>
     <meta charset="UTF-8">
+    <meta name="description" content="Artists">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Rick Murdock">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Monoton" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -49,29 +52,37 @@
           <div class="col-md-6 col-lg-4"> 
             <div class="btn-group-vertical">
               {{#performers}}
-                <button type="button" class="btn btn-outline-primary text-left" onclick="showAlbums(`{{albums}}`)">{{artistName}}</button>
+                <button type="button" class="btn btn-secondary text-left" onclick="showAlbums(`{{artistName}}`, `{{albums}}`)">{{artistName}}</button>
               {{/performers}}
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <h3 class="h3-artist">Albums</h3>
-            <p>These are the albums for this band/artist</p>
-            <ul id="albums">
-            </ul>
+            <p id="albumPara"></p>
+            <div id="albums">
+            </div>
           </div>
         </div>
       </div>
     </div>
   </body>
   <script>  
-    function showAlbums(vinyl) {
+    function showAlbums(band, vinyl) {
+      console.log('vinyl=', vinyl);
+      let albumPara = document.getElementById("albumPara");
       let albumList = document.getElementById("albums");
-      let records = vinyl.split(",");
-
       albumList.innerHTML = "";
 
-      for (x in records) {
-        albumList.innerHTML += "<li>" + records[x] + "</li>";
+      if (vinyl.length > 0) {
+        albumPara.innerHTML = "<p>These are the albums for " + band + "</p>"
+        let records = vinyl.split(",");
+        albumList.innerHTML += "<ul>";
+        for (x in records) {
+          albumList.innerHTML += "<li>" + records[x] + "</li>";
+        }
+        albumList.innerHTML += "</ul>";
+      } else {
+        albumPara.innerHTML = "No albums found for " + band;
       }
     }
   </script>
