@@ -1,9 +1,25 @@
 const express = require('express');
 const indexRouter = express.Router();
+const Artist = require('../models/Artist');
 
 indexRouter.get('/', function (req, res) {
-  //res.send('Artist & Album App');
-  res.render('index', { userName: 'Rick'});
+  let countString = '';
+  let totalAlbums = '';
+
+  Artist.aggregate({$unwind: '$albums'}, {$group: { _id: null, count: { $sum: 1 }}} )
+    .then(sum => {
+      totalAlbums = sum[0].count;
+    });
+
+  Artist
+    .count({}, function(err, count) {})
+    .then(count => {
+      countString = 'Collection Contains ' + count + (count > 1 ? ' Artists' : ' Artist') + ' and ' + totalAlbums + (totalAlbums > 1 ? ' Albums' : ' Album');
+    res.render('index', { artistCount: countString })
+    })
+    .catch(err => {
+      res.status(500).send(err);
+    })
 });
 
 module.exports = indexRouter;
