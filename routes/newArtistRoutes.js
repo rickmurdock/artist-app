@@ -8,11 +8,12 @@ newArtistRouter.get('/', (req, res) => {
 
 newArtistRouter.post('/', (req, res) => {
   let artistData = req.body;
-  let query = artistData.artistName
+  let artist = artistData.artistName;
+  let album = artistData.albumName.replace(/,/g, " ");
 
   if(artistData.albumName != '') {
     Artist
-      .findOneAndUpdate({ artistName: artistData.artistName }, { artistName: artistData.artistName, $addToSet: { albums: artistData.albumName }}, { upsert: true } )
+      .findOneAndUpdate({ artistName: artist }, { artistName: artist, $addToSet: { albums: album }}, { upsert: true } )
       .then(savedArtist => {
         res.redirect('/artist');
       })
@@ -21,7 +22,7 @@ newArtistRouter.post('/', (req, res) => {
       });
   } else {
      Artist
-      .findOneAndUpdate({ artistName: artistData.artistName }, { artistName: artistData.artistName}, { upsert: true } )
+      .findOneAndUpdate({ artistName: artist }, { artistName: artist }, { upsert: true } )
       .then(savedArtist => {
         res.redirect('/artist');
       })
