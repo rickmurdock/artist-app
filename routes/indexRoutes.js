@@ -8,13 +8,13 @@ indexRouter.get('/', function (req, res) {
 
   Artist.aggregate({$unwind: '$albums'}, {$group: { _id: null, count: { $sum: 1 }}} )
     .then(sum => {
-      totalAlbums = sum[0].count;
+      totalAlbums = (sum.length ? sum[0].count : 0);
     });
 
   Artist
     .count({}, function(err, count) {})
     .then(count => {
-      countString = 'Collection Contains ' + count + (count > 1 ? ' Artists' : ' Artist') + ' and ' + totalAlbums + (totalAlbums > 1 ? ' Albums' : ' Album');
+      countString = 'Collection Contains ' + count + (count == 1 ? ' Artist' : ' Artists') + ' and ' + totalAlbums + (totalAlbums == 1 ? ' Album' : ' Albums');
     res.render('index', { artistCount: countString })
     })
     .catch(err => {

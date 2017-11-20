@@ -13,6 +13,9 @@
   background: transparent;
 }
 
+body {
+  background-color: #D0D0D0;
+}
 nav {
   min-height: 56px;
 }
@@ -23,10 +26,6 @@ nav {
   width: 100%;
   background-size: cover;
   background-image: url("./turntable.jpg");
-}
-
-.wrapper-artist {
-  background-color: #D0D0D0;
 }
 
 .btn-artist {

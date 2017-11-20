@@ -68,13 +68,12 @@
   </body>
   <script>  
     function showAlbums(band, vinyl) {
-      console.log('vinyl=', vinyl);
       let albumPara = document.getElementById("albumPara");
       let albumList = document.getElementById("albums");
       albumList.innerHTML = "";
 
       if (vinyl.length > 0) {
-        albumPara.innerHTML = "<p>These are the albums for " + band + "</p>"
+        albumPara.innerHTML = "<p>These are the albums for " + band + ":</p>"
         let records = vinyl.split(",");
         albumList.innerHTML += "<ul>";
         for (x in records) {
@@ -82,7 +81,7 @@
         }
         albumList.innerHTML += "</ul>";
       } else {
-        albumPara.innerHTML = "No albums found for " + band;
+        albumPara.innerHTML = "No albums found for " + band + ".";
       }
     }
   </script>
