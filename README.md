@@ -54,3 +54,7 @@ The candidate’s application should accomplish the following to be considered f
 # My Solution
 
 ![AlbumCollectionHome.png](AlbumCollectionHome.png)
+
+![AlbumCollectionDetail.png](AlbumCollectionDetail.png)
+
+![AlbumCollectionNewArtist.png](AlbumCollectionNewArtist.png)
