@@ -48,3 +48,9 @@ The candidate’s application should accomplish the following to be considered f
   2. Clicking on an artist returns the albums for the artist
 
   3. Clicking the “New Artist / Album” button should present the user with a form to enter a new artist, album, or both and save the new entry.
+
+---
+
+# My Solution
+
+![AlbumCollectionHome.png](AlbumCollectionHome.png)
